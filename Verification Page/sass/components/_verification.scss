@@ -1,0 +1,126 @@
+.verificationWrapper {
+  width: 100%;
+  min-height: 90vh;
+  background-color: var(--background-color-secondary);
+  padding: 41px 37px;
+  border-radius: 5px;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 19px;
+  }
+  .verification {
+    width: 100%;
+    margin-bottom: 95px;
+
+    .verificationSubheader {
+      font-size: 15px;
+      color: #a3a3a3;
+      display: block;
+      margin-bottom: 33px;
+    }
+    .verificationForm {
+      width: 100%;
+      display: flex;
+      gap: 34px;
+      flex-wrap: wrap;
+      margin-bottom: 17px;
+
+      label {
+        width: 542px;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        gap: 12px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 18px 19px;
+        background-color: var(--background-color-accent-72);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        outline: none;
+        border-radius: 9px;
+        font-family: var(--text-font);
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-color-primary);
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.38);
+        }
+      }
+    }
+    .verificationChips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 30px;
+
+      .verificationChip {
+        padding: 3px 9px;
+        background-color: var(--background-color-accent);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-color-primary);
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+          background-color: white;
+          color: var(--background-color-secondary);
+        }
+      }
+    }
+
+    .verificationLegalAid {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+
+      .legalAidIcon {
+        width: 53px;
+        height: 47px;
+        background-color: var(--background-color-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+
+        img {
+          width: 61px;
+          height: 32px;
+        }
+        .legalAidCheckbox {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+        }
+      }
+    }
+  }
+  .verificationAgreement {
+    h2 {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    .verificationAgreementText {
+      width: 100%;
+      padding: 29px 22px;
+      background-color: var(--background-color-accent-72);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 16px;
+      font-weight: 400;
+      color: #88888b;
+      border-radius: 9px;
+    }
+  }
+}
