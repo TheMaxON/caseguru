@@ -1,0 +1,317 @@
+@mixin aiKnowledgeDocumentTemplate() {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 17.4px 16px;
+  background-color: var(--background-color-accent-72);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 7px;
+  cursor: pointer;
+  transition: border 0.15s ease-in-out;
+
+  @media (max-width: 992px) {
+    max-width: 118px;
+    border: none;
+    background-color: transparent;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+@mixin textarea() {
+  width: 100%;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.48);
+  text-indent: 0;
+
+  @media (max-width: 992px) {
+    font-size: 14px;
+    margin-bottom: 11px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.minHeightLimit {
+  min-height: 267.5px;
+}
+
+.btnTransparent {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.aiKnowledgeUpdate {
+  display: flex;
+  box-sizing: border-box;
+  background: rgb(158, 200, 197);
+  background: linear-gradient(
+    90deg,
+    rgba(158, 200, 197, 1) 0%,
+    rgba(255, 239, 136, 1) 100%
+  );
+  padding: 1px;
+  border-radius: 5px;
+
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+
+    background-color: var(--background-color-accent);
+    border: none;
+    color: #fafafa;
+    padding: 15px 21px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 4px;
+    cursor: pointer;
+
+    img {
+      width: 21px;
+      height: 21px;
+      margin-top: -5px;
+    }
+
+    @media (max-width: 992px) {
+      justify-content: center;
+    }
+  }
+}
+
+.aiKnowledge {
+  width: 100%;
+  padding: 34px;
+  background-color: var(--background-color-secondary);
+  border-radius: 5px;
+
+  @media (max-width: 992px) {
+    padding: 10px 15px;
+  }
+
+  .aiKnowledgeHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .aiKnowledgeHeaderControls {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      margin-bottom: 17px;
+
+      @media (max-width: 992px) {
+        margin-bottom: 14px;
+      }
+
+      .backBtn {
+        width: 39px;
+        height: 39px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background-color-accent);
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+      }
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+
+        @media (max-width: 992px) {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .aiKnowledgeSummary {
+    width: 100%;
+    margin-bottom: 50px;
+
+    .aiKnowledgeDescription {
+      display: block;
+      font-family: var(--text-font);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-color-primary);
+      margin-bottom: 26px;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+    .aiKnowledgeSummaryFields {
+      width: 100%;
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      border-color: var(--background-color-accent-72);
+
+      .aiKnowledgeSummariesWrapper {
+        width: 100%;
+        display: flex;
+        gap: 26px;
+
+        @media (max-width: 992px) {
+          flex-direction: column;
+        }
+      }
+
+      .aiKnowledgeSummaryField {
+        max-width: 678px;
+        flex: 1;
+
+        @media (max-width: 992px) {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .aiKnowledgeFieldWrapper {
+          width: 100%;
+          background-color: var(--background-color-accent-72);
+          padding: 21px 24px;
+          border-radius: 5px;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+
+          @media (max-width: 992px) {
+            padding: 15px 20px;
+          }
+
+          .aiKnowledgeFieldInputMobile {
+            @include textarea();
+          }
+
+          .aiKnowledgeFieldContent {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 23px;
+            margin-bottom: 38px;
+
+            textarea {
+              @include textarea();
+            }
+          }
+          .aiKnowledgeFieldInfo {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+              color: rgba(255, 255, 255, 0.48);
+              font-size: 14px;
+            }
+            .aiKnowledgeFieldControls {
+              display: flex;
+              align-items: center;
+              gap: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .aiKnowledgeDocuments {
+    .aiKnowledgeDocumentsWrapper {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 19.4px;
+      background-color: var(--background-color-accent-72);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 31px 24px;
+
+      @media (max-width: 992px) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .aiKnowledgeDocument {
+        @include aiKnowledgeDocumentTemplate();
+
+        &:hover {
+          border: 1px solid var(--color-accent);
+
+          @media (max-width: 992px) {
+            border: none;
+          }
+        }
+        span {
+          font-size: 14px;
+          font-weight: 400;
+
+          @media (max-width: 992px) {
+            font-size: 12px;
+          }
+        }
+        .aiKnowledgeDocumentIcon {
+          @media (max-width: 992px) {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: var(--background-color-accent-72);
+            padding: 17px 16px;
+            border-radius: 8px;
+          }
+        }
+        .aiKnowledgeDocumentRemove {
+          width: 22px;
+          height: 22px;
+          background-color: transparent;
+          border: none;
+          position: absolute;
+          top: -7px;
+          right: -10px;
+          cursor: pointer;
+
+          @media (max-width: 992px) {
+            right: 13px;
+          }
+        }
+      }
+      .aiKnowledgeUploadDocument {
+        width: 200px;
+        @include aiKnowledgeDocumentTemplate();
+
+        span {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.aiKnowledgeFieldContent textarea::-webkit-scrollbar {
+  width: 4px;
+  background: var(--background-color-accent);
+}
+.aiKnowledgeFieldContent textarea::-webkit-scrollbar-thumb {
+  background: #c6f5f3;
+}
+.aiKnowledgeFieldContent textarea::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}

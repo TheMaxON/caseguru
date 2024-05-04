@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Knowledge</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <div class="aiKnowledge">
+      <section class="aiKnowledgeHeader">
+        <div class="aiKnowledgeHeaderControls">
+          <button type="button" class="backBtn">
+            <img src="./icons/left-arrow.svg" alt="Back icon" />
+          </button>
+          <h1>AI knowledge</h1>
+        </div>
+        <div class="aiKnowledgeUpdate">
+          <button type="button">
+            Update Al knowledge
+            <img src="./icons/update.svg" alt="Update icon" />
+          </button>
+        </div>
+      </section>
+
+      <section class="aiKnowledgeSummary">
+        <span class="aiKnowledgeDescription">
+          This is what we currently know about your case
+        </span>
+        <div class="aiKnowledgeSummaryFields">
+          <div class="aiKnowledgeSummariesWrapper">
+            <div class="aiKnowledgeSummaryField">
+              <h2 class="subHeading">Summary</h2>
+              <div class="aiKnowledgeFieldWrapper minHeightLimit">
+                <div class="aiKnowledgeFieldContent">
+                  <textarea readonly rows="7">
+The client is seeking a divorce in England. They have been married for at least one year, and their marriage is legally recognised in the UK. The client is unsure about the grounds for divorce. Both the client and their spouse currently reside in England or Wales. It is unclear whether the divorce will be contested. There are no children under the age of 18 involved, and no arrangements have been made for their weifare. There may be financial matters, such as property, pensions, or other assets, that need to be resolved as part of the divorce.</textarea
+                  >
+                  <button type="button" class="btnTransparent">
+                    <img src="./icons/edit.svg" alt="Edit icon" />
+                  </button>
+                </div>
+                <div class="aiKnowledgeFieldInfo">
+                  <span>0/1500</span>
+                  <button type="button" class="btnTransparent">
+                    <img src="./icons/copy.svg" alt="Copy icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="aiKnowledgeSummaryField">
+              <h2 class="subHeading">New Summary</h2>
+              <div class="aiKnowledgeFieldWrapper minHeightLimit">
+                <div class="aiKnowledgeFieldContent">
+                  <textarea readonly rows="7"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="aiKnowledgeSummaryField">
+            <h2 class="subHeading">Describe new circumstances</h2>
+            <div class="aiKnowledgeFieldWrapper">
+              <div class="aiKnowledgeFieldContent">
+                <textarea
+                  rows="4"
+                  placeholder="Add any new information or circumstances that have arisen since the last time you updated the case. This will help me generate a more accurate summary for your case."></textarea>
+                <button type="button" class="btnTransparent">
+                  <img src="./icons/edit.svg" alt="Edit icon" />
+                </button>
+              </div>
+              <div class="aiKnowledgeFieldInfo">
+                <span></span>
+                <button type="button" class="btnTransparent">
+                  <img src="./icons/copy.svg" alt="Copy icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="aiKnowledgeDocuments">
+        <h2 class="subHeading">New documents</h2>
+        <div class="aiKnowledgeDocumentsWrapper">
+          <div class="aiKnowledgeDocument">
+            <img src="./icons/document.svg" alt="Document icon" />
+            <span>Document name.doc</span>
+            <button type="button" class="aiKnowledgeDocumentRemove">
+              <img src="./icons/remove.svg" alt="Remove icon" />
+            </button>
+          </div>
+          <div class="aiKnowledgeDocument">
+            <img src="./icons/document.svg" alt="Document icon" />
+            <span>Document name.doc</span>
+            <button type="button" class="aiKnowledgeDocumentRemove">
+              <img src="./icons/remove.svg" alt="Remove icon" />
+            </button>
+          </div>
+          <div class="aiKnowledgeUploadDocument">
+            <img src="./icons/upload.svg" alt="Upload icon" />
+            <span>Drag and drop or click to choose upload</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

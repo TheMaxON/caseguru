@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--text-font);
+  color: var(--text-color-primary);
+  padding: 27px 20px;
+
+  @media (max-width: 992px) {
+    padding: 33px 15px;
+  }
+}
+
+.subHeading {
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color-primary);
+  margin-bottom: 11px;
+}
