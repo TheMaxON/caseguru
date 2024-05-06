@@ -20,6 +20,10 @@
   font-size: 14px;
   font-weight: 400;
   color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
   cursor: pointer;
 }
 
@@ -47,6 +51,10 @@
   .verification {
     width: 100%;
     margin-bottom: 60px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 31px;
+    }
 
     .verificationSubheader {
       font-size: 15px;
@@ -316,6 +324,10 @@
 
       .verificationSubmitButton {
         @include buttonTemplate();
+
+        @media (max-width: 992px) {
+          display: none;
+        }
       }
     }
   }
@@ -325,7 +337,11 @@
     h2 {
       font-size: 16px;
       font-weight: 400;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
+
+      @media (max-width: 992px) {
+        margin-bottom: 12px;
+      }
     }
     .verificationAgreementText {
       width: 100%;
@@ -383,6 +399,25 @@
       }
       .verificationAgreementAskButton button {
         @include buttonTemplate();
+      }
+      .verificationSubmitButtonMobile {
+        display: none;
+
+        @media (max-width: 992px) {
+          display: block;
+          background: rgb(158, 200, 197);
+          background: linear-gradient(
+            90deg,
+            rgba(158, 200, 197, 1) 0%,
+            rgba(255, 239, 136, 1) 100%
+          );
+          border-radius: 5px;
+          padding: 1px;
+
+          button {
+            @include buttonTemplate();
+          }
+        }
       }
     }
   }
