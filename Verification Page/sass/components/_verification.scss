@@ -1,3 +1,28 @@
+@mixin formWrappers() {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 34px;
+  margin-bottom: 43px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 30px;
+  }
+}
+
+@mixin buttonTemplate() {
+  width: 203.8px;
+  height: 47px;
+  background-color: var(--background-color-accent);
+  border: 1px solid #c6f5f3;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fafafa;
+  cursor: pointer;
+}
+
 .verificationWrapper {
   width: 100%;
   min-height: 90vh;
@@ -5,115 +30,306 @@
   padding: 41px 37px;
   border-radius: 5px;
 
+  @media (max-width: 992px) {
+    padding: 18px 15px;
+  }
+
   h1 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 19px;
+
+    @media (max-width: 992px) {
+      font-weight: 400;
+      margin-bottom: 13px;
+    }
   }
   .verification {
     width: 100%;
-    margin-bottom: 95px;
+    margin-bottom: 60px;
 
     .verificationSubheader {
       font-size: 15px;
       color: #a3a3a3;
       display: block;
       margin-bottom: 33px;
+
+      @media (max-width: 992px) {
+        margin-bottom: 13px;
+      }
     }
     .verificationForm {
       width: 100%;
+      max-width: 1694px;
       display: flex;
-      gap: 34px;
+      flex-direction: row;
       flex-wrap: wrap;
-      margin-bottom: 17px;
 
-      label {
-        width: 542px;
+      .verificationInfoWrapper {
+        @include formWrappers();
+      }
+      .verificationInfoInput {
+        min-width: 542px;
+        flex: 1;
         display: flex;
         flex-direction: column;
         font-size: 16px;
         gap: 12px;
-      }
-      input,
-      select {
-        width: 100%;
-        padding: 18px 19px;
-        background-color: var(--background-color-accent-72);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        outline: none;
-        border-radius: 9px;
-        font-family: var(--text-font);
-        font-size: 14px;
-        font-weight: 400;
-        color: var(--text-color-primary);
 
-        &::placeholder {
-          color: rgba(255, 255, 255, 0.38);
+        @media (max-width: 992px) {
+          min-width: 100%;
+        }
+
+        input,
+        select {
+          width: 100%;
+          padding: 18px 19px;
+          background-color: var(--background-color-accent-72);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          outline: none;
+          border-radius: 9px;
+          font-family: var(--text-font);
+          font-size: 14px;
+          font-weight: 400;
+          color: var(--text-color-primary);
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.38);
+          }
         }
       }
     }
-    .verificationChips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 30px;
+    .verificationCategoriesWrapper {
+      @include formWrappers();
 
-      .verificationChip {
-        padding: 3px 9px;
+      .verificationCategories {
+        width: 273px;
         background-color: var(--background-color-accent);
+        padding: 26.5px 16px;
         border: 1px solid rgba(255, 255, 255, 0.05);
-        font-size: 14px;
-        font-weight: 400;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--text-color-primary);
-        cursor: pointer;
-        transition: all 0.15s ease-in-out;
+        border-radius: 9px;
 
-        &:hover {
-          background-color: white;
-          color: var(--background-color-secondary);
+        @media (max-width: 992px) {
+          display: none;
+        }
+
+        .verificationCategoriesList {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          gap: 16.7px;
+          font-size: 14px;
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 14px;
+          }
+          input {
+            cursor: pointer;
+          }
+        }
+      }
+      .verificationCategoriesMobile {
+        display: none;
+
+        @media (max-width: 992px) {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 17px;
+
+          label {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 14px;
+            font-weight: 400;
+
+            .verificationCategoriesMobileInput {
+              display: flex;
+              justify-content: space-between;
+              padding: 17px 13px;
+              background-color: var(--background-color-accent-72);
+              border-radius: 9px;
+              border: 1px solid rgba(255, 255, 255, 0.05);
+              font-family: var(--text-font);
+              font-size: 14px;
+              font-weight: 400;
+              color: var(--text-color-primary);
+
+              img {
+                width: 21px;
+                height: 21px;
+              }
+            }
+          }
+        }
+        .verificationCategoriesMobileChips {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 7px;
+
+          .verificationCategoriesMobileChip {
+            background-color: var(--background-color-accent);
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: center;
+            transition: background-color, color 0.15s ease-in-out;
+
+            &:hover {
+              background-color: white;
+              color: var(--background-color-secondary);
+            }
+          }
+        }
+      }
+      .verificationSubcategories {
+        flex: 4;
+        background-color: var(--background-color-accent);
+        padding: 20px 26.5px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 9px;
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+
+        @media (max-width: 992px) {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          padding: 0;
+        }
+
+        .verificationSubcategory {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 13.7px;
+
+          @media (max-width: 992px) {
+            display: none;
+          }
+
+          h3 {
+            font-size: 16px;
+            font-weight: 600;
+          }
+
+          .verificationSubcategoryList {
+            display: flex;
+            gap: 36px;
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              font-size: 14px;
+
+              input {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .verificationSubcategoryMobile {
+          display: none;
+
+          @media (max-width: 992px) {
+            display: block;
+            width: 100%;
+
+            label {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              font-size: 14px;
+              font-weight: 400;
+
+              select {
+                padding: 18px 21px;
+                background-color: var(--background-color-accent-72);
+                border-radius: 9px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                font-family: var(--text-font);
+                font-size: 14px;
+                font-weight: 400;
+                color: var(--text-color-primary);
+              }
+            }
+          }
         }
       }
     }
 
-    .verificationLegalAid {
+    .verificationFormSubmit {
+      width: 100%;
       display: flex;
       align-items: center;
-      gap: 17px;
+      gap: 46.5px;
 
-      .legalAidIcon {
-        width: 53px;
-        height: 47px;
-        background-color: var(--background-color-accent);
+      .verificationLegalAid {
         display: flex;
         align-items: center;
-        justify-content: center;
-        border-radius: 5px;
+        gap: 17px;
 
-        img {
-          width: 61px;
-          height: 32px;
+        @media (max-width: 992px) {
+          display: none;
+        }
+
+        .legalAidIcon {
+          width: 53px;
+          height: 47px;
+          background-color: var(--background-color-accent);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          position: relative;
+
+          img {
+            width: 61px;
+            height: 32px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
         .legalAidCheckbox {
           display: flex;
           align-items: center;
           gap: 18px;
+
+          input {
+            cursor: pointer;
+          }
         }
+      }
+
+      .verificationSubmitButton {
+        @include buttonTemplate();
       }
     }
   }
   .verificationAgreement {
+    position: relative;
+
     h2 {
       font-size: 16px;
       font-weight: 400;
       margin-bottom: 40px;
     }
-
     .verificationAgreementText {
       width: 100%;
+      max-height: 522px;
       padding: 29px 22px;
       background-color: var(--background-color-accent-72);
       border: 1px solid rgba(255, 255, 255, 0.05);
@@ -121,6 +337,64 @@
       font-weight: 400;
       color: #88888b;
       border-radius: 9px;
+      overflow: scroll;
+    }
+    .verificationAgreementBanner {
+      width: 100%;
+      height: 123px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 19px;
+      left: 0;
+      bottom: 0;
+      background: rgb(31, 32, 38);
+      background: linear-gradient(
+        0deg,
+        rgba(31, 32, 38, 0.99) 70%,
+        rgba(31, 32, 38, 0.7) 100%
+      );
+      backdrop-filter: blur(1px);
+
+      @media (max-width: 992px) {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .verificationAgreementDocumentIcon {
+        width: 24px;
+        height: 24px;
+      }
+      .verificationAgreementSignButton {
+        background: rgb(158, 200, 197);
+        background: linear-gradient(
+          90deg,
+          rgba(158, 200, 197, 1) 0%,
+          rgba(255, 239, 136, 1) 100%
+        );
+        border-radius: 5px;
+        padding: 1px;
+
+        button {
+          @include buttonTemplate();
+        }
+      }
+      .verificationAgreementAskButton button {
+        @include buttonTemplate();
+      }
     }
   }
+}
+
+.verificationAgreementText::-webkit-scrollbar {
+  width: 4px;
+  background: var(--background-color-accent);
+}
+.verificationAgreementText::-webkit-scrollbar-thumb {
+  background: #c6f5f3;
+}
+.verificationAgreementText::-webkit-scrollbar-thumb:hover {
+  background: #fff;
 }

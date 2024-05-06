@@ -15,58 +15,161 @@
         >
 
         <form name="verificationForm" class="verificationForm">
-          <label>
-            Your name
-            <input type="text" name="name" placeholder="Name" />
-          </label>
-          <label>
-            Input 1
-            <input type="text" name="input1" placeholder="Text 1" />
-          </label>
-          <label>
-            Input 2
-            <input type="text" name="input2" placeholder="Text 2" />
-          </label>
-          <label>
-            Law types
-            <input type="text" name="input2" placeholder="Debt and Money" />
-          </label>
-          <label>
-            Debt and Money
-            <select name="" id="">
-              <option value="">All</option>
-            </select>
-          </label>
+          <div class="verificationInfoWrapper">
+            <label class="verificationInfoInput">
+              Your name*
+              <input type="text" name="name" placeholder="Name" />
+            </label>
+            <label class="verificationInfoInput">
+              Office
+              <input type="text" name="input1" placeholder="Text 1" />
+            </label>
+            <label class="verificationInfoInput">
+              Input 1
+              <input type="text" name="input2" placeholder="Text 1" />
+            </label>
+          </div>
+          <div class="verificationCategoriesWrapper">
+            <div class="verificationCategories">
+              <div class="verificationCategoriesList">
+                <label for="family" class="verificationCategoriesInput">
+                  <input type="checkbox" name="family" />
+                  Family
+                </label>
+                <label for="debt-and-money" class="verificationCategoriesInput">
+                  <input type="checkbox" name="debt-and-money" />
+                  Debt and Money
+                </label>
+                <label for="debt-and-money" class="verificationCategoriesInput">
+                  <input type="checkbox" name="debt-and-money" />
+                  Debt and Money
+                </label>
+                <label for="debt-and-money" class="verificationCategoriesInput">
+                  <input type="checkbox" name="debt-and-money" />
+                  Debt and Money
+                </label>
+                <label for="debt-and-money" class="verificationCategoriesInput">
+                  <input type="checkbox" name="debt-and-money" />
+                  Debt and Money
+                </label>
+                <label for="debt-and-money" class="verificationCategoriesInput">
+                  <input type="checkbox" name="debt-and-money" />
+                  Debt and Money
+                </label>
+              </div>
+            </div>
+            <div class="verificationCategoriesMobile">
+              <label for=""
+                >Law types
+                <div class="verificationCategoriesMobileInput">
+                  <span>Debt and Money</span>
+                  <img src="./icons/add.svg" alt="Add icon" />
+                </div>
+              </label>
+              <div class="verificationCategoriesMobileChips">
+                <div class="verificationCategoriesMobileChip">
+                  Debt and Money
+                  <img src="./icons/cross.svg" alt="Cross icon" />
+                </div>
+                <div class="verificationCategoriesMobileChip">
+                  Family
+                  <img src="./icons/cross.svg" alt="Cross icon" />
+                </div>
+                <div class="verificationCategoriesMobileChip">
+                  Health
+                  <img src="./icons/cross.svg" alt="Cross icon" />
+                </div>
+                <div class="verificationCategoriesMobileChip">
+                  Debt and Money
+                  <img src="./icons/cross.svg" alt="Cross icon" />
+                </div>
+              </div>
+            </div>
+            <div class="verificationSubcategories">
+              <div class="verificationSubcategory">
+                <h3>Family</h3>
+                <div class="verificationSubcategoryList">
+                  <label
+                    for="debt-and-money"
+                    class="verificationCategoriesInput">
+                    <input type="checkbox" name="debt-and-money" />
+                    Debt and Money
+                  </label>
+                  <label
+                    for="debt-and-money"
+                    class="verificationCategoriesInput">
+                    <input type="checkbox" name="debt-and-money" />
+                    Debt and Money
+                  </label>
+                  <label
+                    for="debt-and-money"
+                    class="verificationCategoriesInput">
+                    <input type="checkbox" name="debt-and-money" />
+                    Debt and Money
+                  </label>
+                  <label
+                    for="debt-and-money"
+                    class="verificationCategoriesInput">
+                    <input type="checkbox" name="debt-and-money" />
+                    Debt and Money
+                  </label>
+                </div>
+              </div>
+              <div class="verificationSubcategory">
+                <h3>Debt and Money</h3>
+                <div class="verificationSubcategoryList">
+                  <label
+                    for="debt-and-money"
+                    class="verificationCategoriesInput">
+                    <input type="checkbox" name="debt-and-money" />
+                    Debt and Money
+                  </label>
+                  <label
+                    for="debt-and-money"
+                    class="verificationCategoriesInput">
+                    <input type="checkbox" name="debt-and-money" />
+                    Debt and Money
+                  </label>
+                  <label
+                    for="debt-and-money"
+                    class="verificationCategoriesInput">
+                    <input type="checkbox" name="debt-and-money" />
+                    Debt and Money
+                  </label>
+                  <label
+                    for="debt-and-money"
+                    class="verificationCategoriesInput">
+                    <input type="checkbox" name="debt-and-money" />
+                    Debt and Money
+                  </label>
+                </div>
+              </div>
+              <div class="verificationSubcategoryMobile">
+                <label for="verificationSubcategory">
+                  Debt and Money
+                  <select
+                    name="verificationSubcategory"
+                    id="verificationSubcategory">
+                    <option value="all">All</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="verificationFormSubmit">
+            <div class="verificationLegalAid">
+              <div class="legalAidIcon">
+                <img src="./icons/legal-aid.png" alt="Legal aid icon" />
+              </div>
+              <label for="legalAidCheckbox" class="legalAidCheckbox">
+                <p>Legal aid</p>
+                <input type="checkbox" name="legalAidCheckbox" />
+              </label>
+            </div>
+            <button type="submit" class="verificationSubmitButton">Save</button>
+          </div>
         </form>
-
-        <div class="verificationChips">
-          <div class="verificationChip">
-            Debt and Money
-            <img src="./icons/cross.svg" alt="Remove icon" />
-          </div>
-          <div class="verificationChip">
-            Family
-            <img src="./icons/cross.svg" alt="Remove icon" />
-          </div>
-          <div class="verificationChip">
-            Health
-            <img src="./icons/cross.svg" alt="Remove icon" />
-          </div>
-          <div class="verificationChip">
-            Debt and Money
-            <img src="./icons/cross.svg" alt="Remove icon" />
-          </div>
-        </div>
-
-        <div class="verificationLegalAid">
-          <div class="legalAidIcon">
-            <img src="./icons/legal-aid.png" alt="Legal aid icon" />
-          </div>
-          <label for="legalAidCheckbox" class="legalAidCheckbox">
-            Legal aid
-            <input type="checkbox" name="legalAidCheckbox" />
-          </label>
-        </div>
       </section>
 
       <section class="verificationAgreement">
@@ -122,6 +225,24 @@
           et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
           delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
           perferendis doloribus asperiores repellat.
+        </div>
+        <div class="verificationAgreementBanner">
+          <img
+            src="./icons/document.svg"
+            alt="Document icon"
+            class="verificationAgreementDocumentIcon" />
+          <div class="verificationAgreementSignButton">
+            <button type="button">
+              <img src="./icons/signature.svg" alt="Signature icon" />
+              Sign the contract
+            </button>
+          </div>
+          <div class="verificationAgreementAskButton">
+            <button type="button">
+              <img src="./icons/question.svg" alt="Question icon" />
+              Ask for help
+            </button>
+          </div>
         </div>
       </section>
     </div>
